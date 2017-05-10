@@ -28,6 +28,8 @@ RUN make
 RUN make install
 RUN make samples
 RUN make config
+RUN apt-get install vim
+RUN service asterisk start
 
 ADD run.sh /run.sh
 CMD ["/run.sh"]
